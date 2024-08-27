@@ -3,7 +3,7 @@
  * Creation Date        : 03-06-2022
 ----------------------------------------------------------------------------------------------------------------------------------
  * Author               : Badam Mayur Krishna
- * Author's Email       : mayurkrishna.b@alpha-numero.tech
+ * Author's Email       : mayurkrishnamk@gmail.com
 ----------------------------------------------------------------------------------------------------------------------------------
 * Description           : Extended test case for testing if the counter is rolling over and back after max and min values respectively
 **********************************************************************************************************************************/

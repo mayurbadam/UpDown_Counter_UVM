@@ -3,7 +3,7 @@
  * Creation Date        : 24-08-2022
 ----------------------------------------------------------------------------------------------------------------------------------
  * Author               : Badam Mayur Krishna
- * Author's Email       : mayurkrishna.b@alpha-numero.tech
+ * Author's Email       : mayurkrishnamk@gmail.com
 ----------------------------------------------------------------------------------------------------------------------------------
  * Description          : This file is for declaring callback base and extended classes for counter project
 **********************************************************************************************************************************/

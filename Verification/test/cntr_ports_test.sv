@@ -3,7 +3,7 @@
  * Creation Date        : 02-06-2022
 ----------------------------------------------------------------------------------------------------------------------------------
  * Author               : Badam Mayur Krishna
- * Author's Email       : mayurkrishna.b@alpha-numero.tech
+ * Author's Email       : mayurkrishnamk@gmail.com
 ----------------------------------------------------------------------------------------------------------------------------------
 * Description           : Extended test case for testing if the connections to the ports of the counter are correct by sending values to the ports of first and second counter differently for different outputs
 **********************************************************************************************************************************/

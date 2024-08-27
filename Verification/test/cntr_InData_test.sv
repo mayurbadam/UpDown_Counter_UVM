@@ -3,7 +3,7 @@
  * Creation Date        : 11-07-2022
 ----------------------------------------------------------------------------------------------------------------------------------
  * Author               : Badam Mayur Krishna
- * Author's Email       : mayurkrishna.b@alpha-numero.tech
+ * Author's Email       : mayurkrishnamk@gmail.com
 ----------------------------------------------------------------------------------------------------------------------------------
  * Description          : Extended test for testing the InData port of the counter with different possible values for InData.
 **********************************************************************************************************************************/

@@ -3,7 +3,7 @@
  * Creation Date        : 03-06-2022
 ----------------------------------------------------------------------------------------------------------------------------------
  * Author               : Badam Mayur Krishna
- * Author's Email       : mayurkrishna.b@alpha-numero.tech
+ * Author's Email       : mayurkrishnamk@gmail.com
 ----------------------------------------------------------------------------------------------------------------------------------
 * Description           : Sequence classes for sending required stimulus for ports_test 
                            i. one_seqs class is for stimulus of counter1
