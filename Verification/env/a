@@ -1,0 +1,166 @@
+Binary file .cntr_config.sv.swp matches
+Binary file .cntr_mon.sv.swp matches
+cntr_mon.sv:15:class cntr_mon extends uvm_monitor;
+cntr_mon.sv:17:   `uvm_component_utils(cntr_mon)
+cntr_mon.sv:20:   cntr_trans data2scb=new();
+cntr_mon.sv:23:   virtual cntr_inf.MON_MP vif;
+cntr_mon.sv:26:   uvm_analysis_port #(cntr_trans) mon_port;
+cntr_mon.sv:29:   function new (string name = "cntr_mon", uvm_component parent);
+cntr_mon.sv:39:      if(!uvm_config_db #(virtual cntr_inf) :: get(this, "", "vif", vif))
+cntr_mon.sv:61:   task get_from_dut(cntr_trans data2scb);
+cntr_seqr.sv:15:typedef class cntr_env;
+cntr_seqr.sv:16:class cntr_seqr extends uvm_sequencer #(cntr_trans);
+cntr_seqr.sv:18:   `uvm_component_utils(cntr_seqr)
+cntr_seqr.sv:20:   cntr_env env;
+cntr_seqr.sv:23:   function new (string name = "cntr_seqr", uvm_component parent);
+cntr_trans_bland.sv:16:class cntr_trans extends uvm_sequence_item;
+cntr_trans_bland.sv:32:   `uvm_object_utils_begin(cntr_trans)
+cntr_trans_bland.sv:45:   function new (string name = "cntr_trans");
+cntr_trans.sv:15:class cntr_trans extends uvm_sequence_item;
+cntr_trans.sv:27:   `uvm_object_utils_begin(cntr_trans)
+cntr_trans.sv:35:   function new (string name = "cntr_trans");
+cntr_defines.sv:4:// File                : cntr_defines.sv
+Binary file .cntr_defines.sv.swp matches
+cntr_report_catcher.sv:2: * Name                 : cntr_report_catcher.sv
+cntr_report_catcher.sv:11:class cntr_catcher extends uvm_report_catcher;
+cntr_report_catcher.sv:12:   function new(string name="cntr_catcher");
+Binary file .cntr_agent_config.sv.swp matches
+cntr_env.sv:4:// File                : cntr_env.sv
+cntr_env.sv:16:class cntr_env extends uvm_env;
+cntr_env.sv:18:   `uvm_component_utils(cntr_env)
+cntr_env.sv:21:   cntr_agent agent[];
+cntr_env.sv:22:   cntr_sb sb_h;
+cntr_env.sv:23:   virtual cntr_inf.RST_MP rst_vif;
+cntr_env.sv:29:   function new (string name = "cntr_env", uvm_component parent=null);
+cntr_env.sv:45:         agent[i] = cntr_agent::type_id::create($sformatf("agent[%0d]",i),this);
+cntr_env.sv:49:      if(!uvm_config_db #(virtual cntr_inf)::get(this, ".","rst_vif", rst_vif))
+cntr_env.sv:53:      sb_h = cntr_sb::type_id::create("sb_h",this);
+cntr_inf.sv:4:// File                : cntr_inf.sv
+cntr_inf.sv:17:interface cntr_inf(input Clk);
+Binary file .cntr_pkg.sv.swp matches
+Binary file .cntr_seqr.sv.swp matches
+cntr_callbacks.sv:2: * Name                 : cntr_callbacks.sv
+cntr_config.sv:3:// Unit                : cntr_config 
+cntr_config.sv:4:// File                : cntr_config.sv
+cntr_config.sv:16:class cntr_config extends uvm_object;
+cntr_config.sv:18:`uvm_object_utils(cntr_config)
+cntr_config.sv:21:   virtual cntr_inf vif;
+cntr_config.sv:27:   function new(string name = "cntr_config");
+Binary file .cntr_drv.sv.swp matches
+Binary file .cntr_trans_bland.sv.swp matches
+cntr_coverage.sv_bak:2: * Name                 : cntr_coverage.sv
+cntr_sb.sv_bak:20:class cntr_sb extends uvm_scoreboard;
+cntr_sb.sv_bak:22:   `uvm_component_utils(cntr_sb)
+cntr_sb.sv_bak:25:   virtual cntr_inf.RST_SC_MP rst_vif;
+cntr_sb.sv_bak:28:   cntr_trans tr0,tr1,ref_tr0,ref_tr1;
+cntr_sb.sv_bak:31:   uvm_analysis_imp_0 #(cntr_trans, cntr_sb) sb_imp0;
+cntr_sb.sv_bak:32:   uvm_analysis_imp_1 #(cntr_trans, cntr_sb) sb_imp1;
+cntr_sb.sv_bak:66:      if(!uvm_config_db #(virtual cntr_inf)::get(this, "*","rst_vif", rst_vif))
+cntr_sb.sv_bak:85:   virtual function void write_0(cntr_trans req);
+cntr_sb.sv_bak:112:   virtual function void write_1(cntr_trans req);
+cntr_sb.sv_bak:136:   virtual function cntr_trans ref_model(cntr_trans act, exp, int n);
+cntr_sb.sv_bak:170:   virtual function void check_data(cntr_trans act, exp, int n);
+cntr_pkg.sv:4:// File                : cntr_pkg.sv
+cntr_pkg.sv:17:`include "cntr_inf.sv"
+cntr_pkg.sv:19:package cntr_pkg;
+cntr_pkg.sv:24:   `include "cntr_defines.sv"
+cntr_pkg.sv:25:   `include "cntr_trans.sv"
+cntr_pkg.sv:26:   `include "cntr_config.sv"
+cntr_pkg.sv:27:   `include "cntr_callbacks.sv"
+cntr_pkg.sv:29:   `include "cntr_drv.sv"
+cntr_pkg.sv:30:   `include "cntr_mon.sv"
+cntr_pkg.sv:31:   `include "cntr_seqr.sv"
+cntr_pkg.sv:32:   `include "cntr_agent.sv"
+cntr_pkg.sv:34:   `include "cntr_coverage.sv"
+cntr_pkg.sv:35:   `include "cntr_base_seqs.sv"
+cntr_pkg.sv:36:   `include "cntr_sb.sv"
+cntr_pkg.sv:37:   `include "cntr_env.sv"
+cntr_pkg.sv:39:   `include "cntr_base_test.sv"
+cntr_pkg.sv:41:   `include "cntr_reset_seqs.sv"
+cntr_pkg.sv:42:   `include "cntr_elu_seqs.sv"
+cntr_pkg.sv:43:   `include "cntr_rorb_seqs.sv"
+cntr_pkg.sv:44:   `include "cntr_ports_seqs.sv"
+cntr_pkg.sv:45:   `include "cntr_priority_seqs.sv"
+cntr_pkg.sv:46:   `include "cntr_InData_seqs.sv"
+cntr_pkg.sv:48:   `include "cntr_reset_test.sv"
+cntr_pkg.sv:49:   `include "cntr_callback_reset_test.sv"
+cntr_pkg.sv:50:   `include "cntr_elu_test.sv"
+cntr_pkg.sv:51:   `include "cntr_rorb_test.sv"
+cntr_pkg.sv:52:   `include "cntr_ports_test.sv"
+cntr_pkg.sv:53:   `include "cntr_priority_test.sv"
+cntr_pkg.sv:54:   `include "cntr_InData_test.sv"
+Binary file .cntr_agent.sv.swp matches
+Binary file .cntr_inf.sv.swp matches
+Binary file .cntr_report_catcher.sv.swp matches
+Binary file .cntr_trans.sv.swp matches
+Binary file .trash_file.sv.swp matches
+trash_file.sv:194:   cntr_trans trans_rhs;
+trash_file.sv:238:class cntr_sb extends uvm_scoreboard;
+trash_file.sv:240:   `uvm_component_utils(cntr_sb)
+trash_file.sv:243:   virtual cntr_inf.RST_SC_MP rst_vif;
+trash_file.sv:246:   cntr_trans tr[], ref_tr[];
+trash_file.sv:249:   uvm_analysis_imp_0 #(cntr_trans, cntr_sb) sb_imp0;
+trash_file.sv:250:   uvm_analysis_imp_1 #(cntr_trans, cntr_sb) sb_imp1;
+trash_file.sv:284:      if(!uvm_config_db #(virtual cntr_inf)::get(this, "*","rst_vif", rst_vif))
+trash_file.sv:303:   virtual function void write_0(cntr_trans req);
+trash_file.sv:330:   virtual function void write_1(cntr_trans req);
+trash_file.sv:355:   virtual function cntr_trans ref_model(cntr_trans act, exp, int n);
+trash_file.sv:383:   virtual function void check_data(cntr_trans act, exp, int n);
+trash_file.sv:457:   uvm_config_db#(virtual cntr_inf)::set(this,$sformatf("env_h.agent[%0d]",i),"vif",vif[i]);
+trash_file.sv:458:   uvm_config_db#(virtual cntr_inf)::set(this,"env_h.sb_h","rst_vif",rst_vif);
+trash_file.sv:459:   tb_cfg[i] = cntr_config::type_id::create($sformatf("tb_cfg[%0d]",i));
+trash_file.sv:461:   if(!uvm_config_db #(virtual cntr_inf) :: get(this, "",$sformatf("vif_%0d",i), tb_cfg[i].vif))
+trash_file.sv:462:   if(!uvm_config_db #(virtual cntr_inf)::get(this, "","vif", tb_cfg[i].vif))
+trash_file.sv:465:   if(!uvm_config_db #(virtual cntr_inf)::get(this, "","vif2", vif2))
+trash_file.sv:475:   uvm_config_db#(cntr_config)::set(this,$sformatf("*.agent[%0d].*", i),$sformatf("cntr_config[%0d]",i),tb_cfg[i]);
+trash_file.sv:478:uvm_config_db#(cntr_config)::set(this,"*","env_config",env_cfg);
+trash_file.sv:484://tb_cfg = cntr_config::type_id::create("tb_cfg");
+trash_file.sv:486://if(!uvm_config_db #(virtual cntr_inf) :: get(this, "", "vif", tb_cfg.vif))
+trash_file.sv:490://uvm_config_db#(cntr_config)::set(this,"*","cntr_config",tb_cfg);
+trash_file.sv:493://uvm_config_db#(cntr_config)::get(this,"*","cntr_config[",tb_cfg);
+trash_file.sv:514://cntr_inf inf0(Clk);
+trash_file.sv:515://cntr_inf inf1(Clk);
+trash_file.sv:528:   //   uvm_config_db #(virtual cntr_inf)::set(null,"*","vif_0", inf0);
+trash_file.sv:529:   //   uvm_config_db #(virtual cntr_inf)::set(null,"*","vif_1", inf1);
+trash_file.sv:530:   //   uvm_config_db #(virtual cntr_inf)::set(null,"*","rst_vif", rst_inf);
+cntr_agent.sv:3:// Unit                 : cntr_agent 
+cntr_agent.sv:4:// File                 : cntr_agent.sv
+cntr_agent.sv:15:class cntr_agent extends uvm_agent;
+cntr_agent.sv:17:   `uvm_component_utils(cntr_agent)
+cntr_agent.sv:20:   virtual cntr_inf vif;
+cntr_agent.sv:23:   cntr_seqr seqr_h;
+cntr_agent.sv:24:   cntr_drv drv_h;
+cntr_agent.sv:25:   cntr_mon mon_h;
+cntr_agent.sv:28:   cntr_config agnt_cfg; 
+cntr_agent.sv:31:   function new (string name = "cntr_agent", uvm_component parent);
+cntr_agent.sv:40:      mon_h = cntr_mon::type_id::create("mon_h",this);
+cntr_agent.sv:41:      drv_h = cntr_drv::type_id::create("drv_h",this);
+cntr_agent.sv:42:      seqr_h = cntr_seqr::type_id::create("seqr_h",this);
+cntr_agent.sv:45:      if (!uvm_config_db #(virtual cntr_inf)::get(this,"","vif", vif)) 
+cntr_agent.sv:49:      uvm_config_db #(virtual cntr_inf)::set(this,"*","vif", vif);
+Binary file .cntr_env.sv.swp matches
+cntr_sb.sv:19:class cntr_sb extends uvm_scoreboard;
+cntr_sb.sv:21:   `uvm_component_utils(cntr_sb)
+cntr_sb.sv:24:   virtual cntr_inf.RST_SC_MP rst_vif;
+cntr_sb.sv:27:   cntr_trans tr0,tr1,ref_tr0,ref_tr1;
+cntr_sb.sv:30:   uvm_analysis_imp_0 #(cntr_trans, cntr_sb) sb_imp0;
+cntr_sb.sv:31:   uvm_analysis_imp_1 #(cntr_trans, cntr_sb) sb_imp1;
+cntr_sb.sv:52:      if(!uvm_config_db #(virtual cntr_inf)::get(this, "*","rst_vif", rst_vif))
+cntr_sb.sv:71:   virtual function void write_0(cntr_trans req);
+cntr_sb.sv:94:   virtual function void write_1(cntr_trans req);
+cntr_sb.sv:114:   virtual function cntr_trans ref_model(cntr_trans act, exp, int n);
+cntr_sb.sv:148:   virtual function void check_data(cntr_trans act, exp, int n);
+Binary file .cntr_coverage.sv.swp matches
+cntr_drv.sv:4:// File                : cntr_drv.sv
+cntr_drv.sv:16:class cntr_drv extends uvm_driver #(cntr_trans);
+cntr_drv.sv:18:   `uvm_component_utils(cntr_drv)
+cntr_drv.sv:19:   `uvm_register_cb(cntr_drv, driver_callback)
+cntr_drv.sv:22:   virtual cntr_inf.DRV_MP vif;
+cntr_drv.sv:25:   function new (string name = "cntr_drv", uvm_component parent);
+cntr_drv.sv:33:      if(!uvm_config_db #(virtual cntr_inf) :: get(this, "", "vif", vif))
+cntr_drv.sv:49:         `uvm_do_callbacks(cntr_drv, driver_callback, pre_drive())
+cntr_drv.sv:51:         `uvm_do_callbacks(cntr_drv, driver_callback, post_drive())
+cntr_drv.sv:59:   task drive(cntr_trans req);
+cntr_coverage.sv:2: * Name                 : cntr_coverage.sv
+Binary file .cntr_callbacks.sv.swp matches
+Binary file .cntr_sb.sv.swp matches
