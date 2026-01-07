@@ -1,0 +1,555 @@
+# vsim -c -do "coverage save -onexit -assert -directive -cvg -codeAll counter_cov2;run -all;exit" -coverage -cvgbintstamp -vopt -sva -sv_seed random -l test2_sim.log work.top "+UVM_TESTNAME=elu_test" "+nowarn3829" 
+# Start time: 12:35:11 on Sep 20,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.5c linux_x86_64 Jul 20 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.cntr_inf(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.cntr_pkg(fast)
+# Loading work.top(fast)
+# Loading work.cntr_inf(fast__2)
+# Loading work.dut_top(fast)
+# Loading work.counter_up_down_1(fast)
+# Loading work.counter_up_down_2(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.cntr_inf(fast)
+# Loading work.cntr_inf(fast__1)
+# Loading /tools/mentor/questa/10.5c/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# Sv_Seed = 804011950
+# coverage save -onexit -assert -directive -cvg -codeAll counter_cov2
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test elu_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               elu_test                -     @484 
+#   env_h                    cntr_env                -     @493 
+#     agent[0]               cntr_agent              -     @518 
+#       drv_h                cntr_drv                -     @565 
+#         rsp_port           uvm_analysis_port       -     @582 
+#         seq_item_port      uvm_seq_item_pull_port  -     @573 
+#       mon_h                cntr_mon                -     @544 
+#         mon_port           uvm_analysis_port       -     @556 
+#       seqr_h               cntr_seqr               -     @591 
+#         rsp_export         uvm_analysis_export     -     @599 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @705 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     agent[1]               cntr_agent              -     @526 
+#       drv_h                cntr_drv                -     @746 
+#         rsp_port           uvm_analysis_port       -     @763 
+#         seq_item_port      uvm_seq_item_pull_port  -     @754 
+#       mon_h                cntr_mon                -     @725 
+#         mon_port           uvm_analysis_port       -     @737 
+#       seqr_h               cntr_seqr               -     @772 
+#         rsp_export         uvm_analysis_export     -     @780 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @886 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     sb_h                   cntr_sb                 -     @535 
+#       sb_imp0              uvm_analysis_imp_0      -     @923 
+#       sb_imp1              uvm_analysis_imp_1      -     @932 
+# --------------------------------------------------------------
+# 
+# UVM_INFO ../test/cntr_elu_test.sv(35) @ 0: uvm_test_top [ELU_TEST] In elu_test run_phase
+# UVM_INFO ../test/cntr_elu_test.sv(38) @ 0: uvm_test_top [ELU_TEST] In elu_test raised objection
+# UVM_INFO ../env/cntr_sb.sv(74) @ 10: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 10: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 10: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 10: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 10: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 10: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 10: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 20: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 20: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 20: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 20: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 20: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 20: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 20: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 30: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 30: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 30: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 30: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 30: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 30: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 30: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 0, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 40: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 40: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 65, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 40: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 65, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 40: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 40: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 40: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 201, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 40: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 201, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 50: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 50: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 50: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 201, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 50: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 201, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 50: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 50: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 65, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 50: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 65, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 60: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 60: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 50, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 60: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 50, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 60: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 60: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 60: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 85, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 60: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 85, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 70: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 70: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 70: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 85, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 70: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 85, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 70: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 70: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 50, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 70: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 50, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 80: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 80: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 81, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 80: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 81, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 80: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 80: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 80: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 11, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 80: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 11, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 90: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 90: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 90: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 11, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 90: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 11, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 90: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 90: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 81, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 90: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 81, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 100: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 100: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 149, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 100: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 149, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 100: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 100: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 100: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 17, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 100: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 17, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 110: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 110: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 110: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 17, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 110: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 17, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 110: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 110: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 149, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 110: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 149, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 120: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 120: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 84, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 120: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 84, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 120: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 120: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 120: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 8, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 120: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 8, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 130: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 130: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 130: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: DISABLE_LOAD, In: 8, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 130: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: DISABLE_LOAD, In: 8, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 130: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 130: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: DISABLE_LOAD, In: 84, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 130: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: DISABLE_LOAD, In: 84, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 140: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 140: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 25, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 140: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 25, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 140: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 140: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 140: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 246, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 140: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 246, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 150: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 150: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 150: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 246, Out : 246
+# UVM_INFO ../env/cntr_sb.sv(156) @ 150: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 246, Out : 246
+# UVM_INFO ../env/cntr_sb.sv(151) @ 150: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 150: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 25, Out : 25
+# UVM_INFO ../env/cntr_sb.sv(156) @ 150: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 25, Out : 25
+# UVM_INFO ../env/cntr_sb.sv(151) @ 160: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 160: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 209, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 160: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 209, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 160: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 160: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 160: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 23, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 160: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 23, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 170: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 170: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 170: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 23, Out : 23
+# UVM_INFO ../env/cntr_sb.sv(156) @ 170: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 23, Out : 23
+# UVM_INFO ../env/cntr_sb.sv(151) @ 170: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 170: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 209, Out : 209
+# UVM_INFO ../env/cntr_sb.sv(156) @ 170: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 209, Out : 209
+# UVM_INFO ../env/cntr_sb.sv(151) @ 180: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 180: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 69, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 180: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 69, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 180: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 180: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 180: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 87, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 180: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 87, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 190: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 190: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 190: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 87, Out : 87
+# UVM_INFO ../env/cntr_sb.sv(156) @ 190: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 87, Out : 87
+# UVM_INFO ../env/cntr_sb.sv(151) @ 190: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 190: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 69, Out : 69
+# UVM_INFO ../env/cntr_sb.sv(156) @ 190: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 69, Out : 69
+# UVM_INFO ../env/cntr_sb.sv(151) @ 200: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 200: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 210, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 200: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 210, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 200: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 1
+# UVM_INFO ../env/cntr_sb.sv(151) @ 200: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 200: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 72, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(156) @ 200: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 72, Out : 0
+# UVM_INFO ../env/cntr_sb.sv(74) @ 210: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 210: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 210: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 72, Out : 72
+# UVM_INFO ../env/cntr_sb.sv(156) @ 210: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 72, Out : 72
+# UVM_INFO ../env/cntr_sb.sv(151) @ 210: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 210: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 210, Out : 210
+# UVM_INFO ../env/cntr_sb.sv(156) @ 210: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 210, Out : 210
+# UVM_INFO ../env/cntr_sb.sv(151) @ 220: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 220: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 35, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(156) @ 220: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 35, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(74) @ 220: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 220: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 220: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 58, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(156) @ 220: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 58, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(74) @ 230: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 230: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 230: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 86, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(156) @ 230: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 86, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(151) @ 230: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 230: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 17, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(156) @ 230: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 17, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(151) @ 240: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 240: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 35, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(156) @ 240: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 35, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(74) @ 240: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 240: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 240: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 85, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(156) @ 240: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 85, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(74) @ 250: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 250: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 250: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 132, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(156) @ 250: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 132, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(151) @ 250: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 250: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 155, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(156) @ 250: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 155, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(151) @ 260: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 260: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 182, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(156) @ 260: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 182, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(74) @ 260: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 260: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 260: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 225, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(156) @ 260: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 225, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(74) @ 270: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 270: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 270: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DISABLE, emode: NORMAL, In: 163, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(156) @ 270: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DISABLE, emode: NORMAL, In: 163, Out : 58
+# UVM_INFO ../env/cntr_sb.sv(151) @ 270: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 270: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DISABLE, emode: NORMAL, In: 253, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(156) @ 270: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DISABLE, emode: NORMAL, In: 253, Out : 35
+# UVM_INFO ../env/cntr_sb.sv(151) @ 280: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 280: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 103, Out : 103
+# UVM_INFO ../env/cntr_sb.sv(156) @ 280: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 103, Out : 103
+# UVM_INFO ../env/cntr_sb.sv(74) @ 280: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 280: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 280: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 169, Out : 169
+# UVM_INFO ../env/cntr_sb.sv(156) @ 280: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 169, Out : 169
+# UVM_INFO ../env/cntr_sb.sv(74) @ 290: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 290: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 290: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 4, Out : 4
+# UVM_INFO ../env/cntr_sb.sv(156) @ 290: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 4, Out : 4
+# UVM_INFO ../env/cntr_sb.sv(151) @ 290: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 290: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 110, Out : 110
+# UVM_INFO ../env/cntr_sb.sv(156) @ 290: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 110, Out : 110
+# UVM_INFO ../env/cntr_sb.sv(151) @ 300: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 300: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 196, Out : 196
+# UVM_INFO ../env/cntr_sb.sv(156) @ 300: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 196, Out : 196
+# UVM_INFO ../env/cntr_sb.sv(74) @ 300: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 300: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 300: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 249, Out : 249
+# UVM_INFO ../env/cntr_sb.sv(156) @ 300: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 249, Out : 249
+# UVM_INFO ../env/cntr_sb.sv(74) @ 310: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 310: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 310: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 151, Out : 151
+# UVM_INFO ../env/cntr_sb.sv(156) @ 310: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 151, Out : 151
+# UVM_INFO ../env/cntr_sb.sv(151) @ 310: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 310: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 18, Out : 18
+# UVM_INFO ../env/cntr_sb.sv(156) @ 310: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 18, Out : 18
+# UVM_INFO ../env/cntr_sb.sv(151) @ 320: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 320: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 88, Out : 88
+# UVM_INFO ../env/cntr_sb.sv(156) @ 320: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 88, Out : 88
+# UVM_INFO ../env/cntr_sb.sv(74) @ 320: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 320: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 320: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 48, Out : 48
+# UVM_INFO ../env/cntr_sb.sv(156) @ 320: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 48, Out : 48
+# UVM_INFO ../env/cntr_sb.sv(74) @ 330: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 330: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 330: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: UP, emode: NORMAL, In: 27, Out : 49
+# UVM_INFO ../env/cntr_sb.sv(156) @ 330: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: UP, emode: NORMAL, In: 27, Out : 49
+# UVM_INFO ../env/cntr_sb.sv(151) @ 330: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 330: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: UP, emode: NORMAL, In: 247, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(156) @ 330: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: UP, emode: NORMAL, In: 247, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(151) @ 340: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 340: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: UP, emode: NORMAL, In: 42, Out : 90
+# UVM_INFO ../env/cntr_sb.sv(156) @ 340: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: UP, emode: NORMAL, In: 42, Out : 90
+# UVM_INFO ../env/cntr_sb.sv(74) @ 340: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 340: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 340: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: UP, emode: NORMAL, In: 20, Out : 50
+# UVM_INFO ../env/cntr_sb.sv(156) @ 340: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: UP, emode: NORMAL, In: 20, Out : 50
+# UVM_INFO ../env/cntr_sb.sv(74) @ 350: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 350: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 350: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: UP, emode: NORMAL, In: 96, Out : 51
+# UVM_INFO ../env/cntr_sb.sv(156) @ 350: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: UP, emode: NORMAL, In: 96, Out : 51
+# UVM_INFO ../env/cntr_sb.sv(151) @ 350: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 350: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: UP, emode: NORMAL, In: 42, Out : 91
+# UVM_INFO ../env/cntr_sb.sv(156) @ 350: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: UP, emode: NORMAL, In: 42, Out : 91
+# UVM_INFO ../env/cntr_sb.sv(151) @ 360: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 360: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: UP, emode: NORMAL, In: 81, Out : 92
+# UVM_INFO ../env/cntr_sb.sv(156) @ 360: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: UP, emode: NORMAL, In: 81, Out : 92
+# UVM_INFO ../env/cntr_sb.sv(74) @ 360: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 360: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 360: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: UP, emode: NORMAL, In: 122, Out : 52
+# UVM_INFO ../env/cntr_sb.sv(156) @ 360: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: UP, emode: NORMAL, In: 122, Out : 52
+# UVM_INFO ../env/cntr_sb.sv(74) @ 370: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 370: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 370: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: UP, emode: NORMAL, In: 128, Out : 53
+# UVM_INFO ../env/cntr_sb.sv(156) @ 370: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: UP, emode: NORMAL, In: 128, Out : 53
+# UVM_INFO ../env/cntr_sb.sv(151) @ 370: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 370: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: UP, emode: NORMAL, In: 187, Out : 93
+# UVM_INFO ../env/cntr_sb.sv(156) @ 370: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: UP, emode: NORMAL, In: 187, Out : 93
+# UVM_INFO ../env/cntr_sb.sv(151) @ 380: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 380: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DOWN, emode: NORMAL, In: 151, Out : 92
+# UVM_INFO ../env/cntr_sb.sv(156) @ 380: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DOWN, emode: NORMAL, In: 151, Out : 92
+# UVM_INFO ../env/cntr_sb.sv(74) @ 380: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 380: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 380: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DOWN, emode: NORMAL, In: 12, Out : 52
+# UVM_INFO ../env/cntr_sb.sv(156) @ 380: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DOWN, emode: NORMAL, In: 12, Out : 52
+# UVM_INFO ../env/cntr_sb.sv(74) @ 390: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 390: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 390: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DOWN, emode: NORMAL, In: 22, Out : 51
+# UVM_INFO ../env/cntr_sb.sv(156) @ 390: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DOWN, emode: NORMAL, In: 22, Out : 51
+# UVM_INFO ../env/cntr_sb.sv(151) @ 390: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 390: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DOWN, emode: NORMAL, In: 194, Out : 91
+# UVM_INFO ../env/cntr_sb.sv(156) @ 390: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DOWN, emode: NORMAL, In: 194, Out : 91
+# UVM_INFO ../env/cntr_sb.sv(151) @ 400: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 400: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DOWN, emode: NORMAL, In: 148, Out : 90
+# UVM_INFO ../env/cntr_sb.sv(156) @ 400: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DOWN, emode: NORMAL, In: 148, Out : 90
+# UVM_INFO ../env/cntr_sb.sv(74) @ 400: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 400: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 400: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DOWN, emode: NORMAL, In: 52, Out : 50
+# UVM_INFO ../env/cntr_sb.sv(156) @ 400: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DOWN, emode: NORMAL, In: 52, Out : 50
+# UVM_INFO ../env/cntr_sb.sv(74) @ 410: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 410: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 410: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DOWN, emode: NORMAL, In: 236, Out : 49
+# UVM_INFO ../env/cntr_sb.sv(156) @ 410: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DOWN, emode: NORMAL, In: 236, Out : 49
+# UVM_INFO ../env/cntr_sb.sv(151) @ 410: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 410: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DOWN, emode: NORMAL, In: 2, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(156) @ 410: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DOWN, emode: NORMAL, In: 2, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(151) @ 420: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 420: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: DOWN, emode: NORMAL, In: 253, Out : 88
+# UVM_INFO ../env/cntr_sb.sv(156) @ 420: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: DOWN, emode: NORMAL, In: 253, Out : 88
+# UVM_INFO ../env/cntr_sb.sv(74) @ 420: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 420: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 420: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: DOWN, emode: NORMAL, In: 161, Out : 48
+# UVM_INFO ../env/cntr_sb.sv(156) @ 420: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: DOWN, emode: NORMAL, In: 161, Out : 48
+# UVM_INFO ../env/cntr_sb.sv(74) @ 430: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 430: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 430: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 141, Out : 141
+# UVM_INFO ../env/cntr_sb.sv(156) @ 430: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 141, Out : 141
+# UVM_INFO ../env/cntr_sb.sv(151) @ 430: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 430: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 11, Out : 11
+# UVM_INFO ../env/cntr_sb.sv(156) @ 430: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 11, Out : 11
+# UVM_INFO ../env/cntr_sb.sv(151) @ 440: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 440: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 209, Out : 209
+# UVM_INFO ../env/cntr_sb.sv(156) @ 440: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 209, Out : 209
+# UVM_INFO ../env/cntr_sb.sv(74) @ 440: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 440: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 440: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 78, Out : 78
+# UVM_INFO ../env/cntr_sb.sv(156) @ 440: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 78, Out : 78
+# UVM_INFO ../env/cntr_sb.sv(74) @ 450: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 450: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 450: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 180, Out : 180
+# UVM_INFO ../env/cntr_sb.sv(156) @ 450: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 180, Out : 180
+# UVM_INFO ../env/cntr_sb.sv(151) @ 450: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 450: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 160, Out : 160
+# UVM_INFO ../env/cntr_sb.sv(156) @ 450: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 160, Out : 160
+# UVM_INFO ../env/cntr_sb.sv(151) @ 460: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 460: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 37, Out : 37
+# UVM_INFO ../env/cntr_sb.sv(156) @ 460: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 37, Out : 37
+# UVM_INFO ../env/cntr_sb.sv(74) @ 460: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 460: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 460: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 33, Out : 33
+# UVM_INFO ../env/cntr_sb.sv(156) @ 460: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 33, Out : 33
+# UVM_INFO ../env/cntr_sb.sv(74) @ 470: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 470: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 470: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 178, Out : 178
+# UVM_INFO ../env/cntr_sb.sv(156) @ 470: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 178, Out : 178
+# UVM_INFO ../env/cntr_sb.sv(151) @ 470: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 470: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 89, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(156) @ 470: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 89, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(151) @ 480: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 480: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 27, Out : 27
+# UVM_INFO ../env/cntr_sb.sv(156) @ 480: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 27, Out : 27
+# UVM_INFO ../env/cntr_sb.sv(74) @ 480: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 480: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 480: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 216, Out : 216
+# UVM_INFO ../env/cntr_sb.sv(156) @ 480: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 216, Out : 216
+# UVM_INFO ../env/cntr_sb.sv(74) @ 490: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 490: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 490: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 165, Out : 165
+# UVM_INFO ../env/cntr_sb.sv(156) @ 490: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 165, Out : 165
+# UVM_INFO ../env/cntr_sb.sv(151) @ 490: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 490: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 98, Out : 98
+# UVM_INFO ../env/cntr_sb.sv(156) @ 490: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 98, Out : 98
+# UVM_INFO ../env/cntr_sb.sv(151) @ 500: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 500: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 204, Out : 204
+# UVM_INFO ../env/cntr_sb.sv(156) @ 500: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 204, Out : 204
+# UVM_INFO ../env/cntr_sb.sv(74) @ 500: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 500: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 500: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 149, Out : 149
+# UVM_INFO ../env/cntr_sb.sv(156) @ 500: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 149, Out : 149
+# UVM_INFO ../env/cntr_sb.sv(74) @ 510: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 510: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 510: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 162, Out : 162
+# UVM_INFO ../env/cntr_sb.sv(156) @ 510: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 162, Out : 162
+# UVM_INFO ../env/cntr_sb.sv(151) @ 510: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 510: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 252, Out : 252
+# UVM_INFO ../env/cntr_sb.sv(156) @ 510: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 252, Out : 252
+# UVM_INFO ../env/cntr_sb.sv(151) @ 520: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 520: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 254, Out : 254
+# UVM_INFO ../env/cntr_sb.sv(156) @ 520: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 254, Out : 254
+# UVM_INFO ../env/cntr_sb.sv(74) @ 520: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 520: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 520: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 34, Out : 34
+# UVM_INFO ../env/cntr_sb.sv(156) @ 520: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 34, Out : 34
+# UVM_INFO ../env/cntr_sb.sv(74) @ 530: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 530: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 530: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 242, Out : 242
+# UVM_INFO ../env/cntr_sb.sv(156) @ 530: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 242, Out : 242
+# UVM_INFO ../env/cntr_sb.sv(151) @ 530: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 530: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 242, Out : 242
+# UVM_INFO ../env/cntr_sb.sv(156) @ 530: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 242, Out : 242
+# UVM_INFO ../env/cntr_sb.sv(151) @ 540: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 540: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 36, Out : 36
+# UVM_INFO ../env/cntr_sb.sv(156) @ 540: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 36, Out : 36
+# UVM_INFO ../env/cntr_sb.sv(74) @ 540: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 540: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 540: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 188, Out : 188
+# UVM_INFO ../env/cntr_sb.sv(156) @ 540: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 188, Out : 188
+# UVM_INFO ../env/cntr_sb.sv(74) @ 550: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 550: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 550: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 89, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(156) @ 550: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 89, Out : 89
+# UVM_INFO ../env/cntr_sb.sv(151) @ 550: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 550: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 61, Out : 61
+# UVM_INFO ../env/cntr_sb.sv(156) @ 550: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 61, Out : 61
+# UVM_INFO ../env/cntr_sb.sv(151) @ 560: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 560: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 219, Out : 219
+# UVM_INFO ../env/cntr_sb.sv(156) @ 560: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 219, Out : 219
+# UVM_INFO ../env/cntr_sb.sv(74) @ 560: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 560: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 560: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 231, Out : 231
+# UVM_INFO ../env/cntr_sb.sv(156) @ 560: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 231, Out : 231
+# UVM_INFO ../env/cntr_sb.sv(74) @ 570: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 570: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 570: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 114, Out : 114
+# UVM_INFO ../env/cntr_sb.sv(156) @ 570: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 114, Out : 114
+# UVM_INFO ../env/cntr_sb.sv(151) @ 570: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 570: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 235, Out : 235
+# UVM_INFO ../env/cntr_sb.sv(156) @ 570: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 235, Out : 235
+# UVM_INFO ../env/cntr_sb.sv(151) @ 580: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 580: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 24, Out : 24
+# UVM_INFO ../env/cntr_sb.sv(156) @ 580: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 24, Out : 24
+# UVM_INFO ../env/cntr_sb.sv(74) @ 580: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 580: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 580: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 106, Out : 106
+# UVM_INFO ../env/cntr_sb.sv(156) @ 580: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 106, Out : 106
+# UVM_INFO ../env/cntr_sb.sv(74) @ 590: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 590: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 590: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 212, Out : 212
+# UVM_INFO ../env/cntr_sb.sv(156) @ 590: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 212, Out : 212
+# UVM_INFO ../env/cntr_sb.sv(151) @ 590: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 590: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 43, Out : 43
+# UVM_INFO ../env/cntr_sb.sv(156) @ 590: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 43, Out : 43
+# UVM_INFO ../env/cntr_sb.sv(151) @ 600: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 600: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 8, Out : 8
+# UVM_INFO ../env/cntr_sb.sv(156) @ 600: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 8, Out : 8
+# UVM_INFO ../env/cntr_sb.sv(74) @ 600: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 600: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 600: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 204, Out : 204
+# UVM_INFO ../env/cntr_sb.sv(156) @ 600: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 204, Out : 204
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 610: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../env/cntr_sb.sv(74) @ 610: uvm_test_top.env_h.sb_h [SCOREBOARD] Reset: 0
+# UVM_INFO ../env/cntr_sb.sv(151) @ 610: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 610: uvm_test_top.env_h.sb_h [CHECK] ACT0: mode: LOAD, emode: NORMAL, In: 134, Out : 134
+# UVM_INFO ../env/cntr_sb.sv(156) @ 610: uvm_test_top.env_h.sb_h [CHECK] EXP0: mode: LOAD, emode: NORMAL, In: 134, Out : 134
+# UVM_INFO ../env/cntr_sb.sv(151) @ 610: uvm_test_top.env_h.sb_h [CHECK] PASS
+# UVM_INFO ../env/cntr_sb.sv(155) @ 610: uvm_test_top.env_h.sb_h [CHECK] ACT2: mode: LOAD, emode: NORMAL, In: 227, Out : 227
+# UVM_INFO ../env/cntr_sb.sv(156) @ 610: uvm_test_top.env_h.sb_h [CHECK] EXP2: mode: LOAD, emode: NORMAL, In: 227, Out : 227
+# ==============================================================
+#                                                               
+#                #####     ##     ####   ####                   
+#                #    #   #  #   #      #                       
+#                #    #  #    #  #      #                       
+#                #####   ######   ###    ###                   
+#                #       #    #      #      #                   
+#                #       #    #      #      #                   
+#                #       #    #  ####   ####                    
+#                                                               
+# ==============================================================
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  434
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [CHECK]   366
+# [ELU_TEST]     2
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD]    61
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /tools/mentor/questa/10.5c/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 610 ns  Iteration: 53  Instance: /top
+# Saving coverage database on exit...
+# End time: 12:35:27 on Sep 20,2022, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0
