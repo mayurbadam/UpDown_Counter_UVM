@@ -1,0 +1,7 @@
+-v c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\env\cntr_pkg.sv
++incdir+c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\env
++incdir+c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\rtl
++incdir+c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\top
++incdir+c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\env
++incdir+c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\rtl
++incdir+c:\Users\mayur\Desktop\projects\UpDown_Counter_UVM\Verification\top
